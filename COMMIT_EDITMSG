@@ -1,0 +1,9 @@
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch task-1
+# Changes to be committed:
+#	modified:   notebooks/sentment_analysis.ipynb
+#	modified:   scripts/data_visualizer.py
+#
