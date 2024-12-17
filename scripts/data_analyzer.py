@@ -29,9 +29,9 @@ def convert_mixed_datetime(value):
         return None
     try:
         dt = pd.to_datetime(value)  # Convert to datetime
-        if dt.tzinfo is None:       # If naive, make it timezone-aware (e.g., UTC)
-            return dt.replace(tzinfo=pytz.UTC)        
-        return dt  # Return as-is if already timezone-aware
+        if dt.tzinfo is  None:       # If naive, take only the date part 
+            return   dt.date()     
+        return dt.tz_localize(None).date()   # remove the tzinfo and take date part
     except Exception as e:       
         print(f"Error parsing value: {value}, {e}")
         return None
